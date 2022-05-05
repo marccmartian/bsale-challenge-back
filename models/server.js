@@ -9,6 +9,7 @@ class Server {
     this.paths = {
       products: "/api/products",
       categories: "/api/categories",
+      images: "/api/images",
     };
     this.dbConnection();
     this.middleswares();
@@ -34,6 +35,7 @@ class Server {
   routes() {
     this.app.use(this.paths.products, require("../routes/products"));
     this.app.use(this.paths.categories, require("../routes/categories"));
+    this.app.use(this.paths.images, require("../routes/images"));
   }
 
   listen() {

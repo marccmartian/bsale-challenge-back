@@ -13,6 +13,12 @@ const getPagingData = (data, page, limit) => {
   const { count: totalItems, rows: products } = data;
   const currentPage = page ? +page : 0;
   const totalPages = Math.ceil(totalItems / limit);
+
+  products.forEach((product) => {
+    if (!product.url_image)
+      product.url_image = `${process.env.BACKEND_URL}/api/images/no-image.jpg`;
+  });
+
   return { totalItems, totalPages, currentPage, products };
 };
 
