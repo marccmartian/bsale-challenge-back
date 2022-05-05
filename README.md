@@ -8,7 +8,7 @@ Este proyecto es una Api rest demo realizada usando Node JS, entrega todos los p
 - Ejecuta en la terminal `npm install`
 
 ## Configuración
-debes crear un archivo `.env` y agregarle los parametros especificados en el archivo `.example.env`
+Debes crear un archivo `.env` en la raíz del proyecto y agregarle los parametros especificados en el archivo `.example.env`
 ```
 PORT=
 HOST=
